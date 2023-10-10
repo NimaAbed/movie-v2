@@ -39,7 +39,7 @@ export default function MenuCategory({ kid, title }) {
                 }}
             >
                 {kid?.map((item, index) => (
-                    <MenuItem key={index} onClick={handleClose}><Link href={{ pathname: "/movie", query: { category: Object.keys(item) } }}>{Object.values(item)}</Link></MenuItem>
+                    <MenuItem key={index} onClick={handleClose}><Link href={`/movies/${Object.keys(item)}`}>{Object.values(item)}</Link></MenuItem>
                 ))}
             </Menu>
         </>
