@@ -14,7 +14,8 @@ const PremiumCard = ({ time = 0, price = 0 }) => {
         const res = await fetch("/api/buy", {
             method: "POST",
             body: JSON.stringify({ time }),
-            headers: { 'Content-Type': 'application/json' }
+            headers: { 'Content-Type': 'application/json' },
+            cache: "no-store"
         })
         const data = await res.json()
         console.log(data)

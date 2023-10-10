@@ -14,6 +14,7 @@ const page = async ({ params }) => {
             headers: {
                 "Content-Type": "application/json",
             },
+            cache: "no-store"
         }
     ).then((res) => res.json());
 

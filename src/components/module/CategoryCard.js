@@ -18,6 +18,7 @@ const CategoryCard = async ({ title, slug, category }) => {
             headers: {
                 "Content-Type": "application/json",
             },
+            cache: "no-store"
         }
     ).then((res) => res.json());
 

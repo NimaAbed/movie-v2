@@ -23,6 +23,7 @@ const page = async ({ params }) => {
         headers: {
             "Content-Type": "application/json",
         },
+        cache: "no-store"
     })
     const { data } = await res.json()
 
@@ -34,6 +35,7 @@ const page = async ({ params }) => {
         headers: {
             "Content-Type": "application/json",
         },
+        cache: "no-store"
     })
     const { data: { comments } } = await resComments.json()
 

@@ -21,7 +21,8 @@ const page = async () => {
             query: MOVIES_LIST,
             variables: { array: movies }
         }),
-        headers: { 'Content-Type': 'application/json' }
+        headers: { 'Content-Type': 'application/json' },
+        cache: "no-store"
     }).then(res => res.json())
 
 

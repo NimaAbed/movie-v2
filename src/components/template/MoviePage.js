@@ -93,7 +93,8 @@ const MoviePage = (props) => {
         const res = await fetch("/api/mutation/send-comments", {
             method: "POST",
             body: JSON.stringify({ ...comVAlue, haveSpoile: comVAlue.spoile, slug: movie.slug }),
-            headers: { 'Content-Type': 'application/json' }
+            headers: { 'Content-Type': 'application/json' },
+            cache: "no-store"
         })
         const data = await res.json()
 
@@ -109,7 +110,8 @@ const MoviePage = (props) => {
         const res = await fetch("/api/mutation/saved", {
             method: "POST",
             body: JSON.stringify({ slug: movie.slug, status }),
-            headers: { 'Content-Type': 'application/json' }
+            headers: { 'Content-Type': 'application/json' },
+            cache: "no-store"
         })
         const data = await res.json()
         if (data.error) {
@@ -128,7 +130,8 @@ const MoviePage = (props) => {
             const res = await fetch("/api/mutation/saved", {
                 method: "PATCH",
                 body: JSON.stringify({ status: evt.target.value, slug: movie.slug }),
-                headers: { 'Content-Type': 'application/json' }
+                headers: { 'Content-Type': 'application/json' },
+                cache: "no-store"
             })
             const data = await res.json()
             if (data.error) {

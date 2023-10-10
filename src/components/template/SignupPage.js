@@ -25,7 +25,8 @@ const SignupPage = () => {
         const res = await fetch("/api/auth/signup", {
             method: "POST",
             body: JSON.stringify(userValue),
-            headers: { 'Content-Type': 'application/json' }
+            headers: { 'Content-Type': 'application/json' },
+            cache: "no-store"
         })
         const data = await res.json()
         console.log(data)
