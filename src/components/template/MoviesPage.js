@@ -8,7 +8,7 @@ const MoviesPage = ({ movies }) => {
             <div className={styles.container}>
                 {movies.category.movies.map(item => (
                     // <Grid item xs={6} sm={4} md={3} lg={2}>
-                    <Cards {...item} style={{ marginTop: "20px" }} />
+                    <Cards {...item} key={item.id} style={{ marginTop: "20px" }} />
                     // </Grid>
                 ))}
             </div>

@@ -6,7 +6,7 @@ const GET_MOVIES = (category) => {
       coverPhoto{url}
       slug
       about
-      
+      id
     }
   }}`
 }

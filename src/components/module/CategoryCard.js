@@ -31,7 +31,7 @@ const CategoryCard = async ({ title, slug, category }) => {
             </Grid>
             <div className={styles.cardContainer}  >
                 {data.category.movies.map(item => (
-                    <Cards {...item} />
+                    <Cards key={item.id} {...item} />
                 ))}
             </div>
         </>
