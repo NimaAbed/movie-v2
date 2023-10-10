@@ -12,6 +12,7 @@ import { PiUserGear } from "react-icons/pi"
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { signOut } from "next-auth/react";
 
 
 const DashboardSideBar = ({ children, email }) => {
@@ -59,7 +60,7 @@ const DashboardSideBar = ({ children, email }) => {
                             <li id="movie-list"><Link href="/dashboard/movie-list"><BiCameraMovie /> فیلم لیست</Link></li>
                             <li ><PiUserGear /> ویرایش پروفایل</li>
                             {/* <li id="add-movie"><Link href="/dashboard/add-movie"><MdOutlineMovieFilter /> ثبت فیلم</Link></li> */}
-                            <li><BiLogOut /> خروج</li>
+                            <li onClick={() => signOut({ redirect: false })}><BiLogOut /> خروج</li>
 
                         </ul>
                     </Grid>
