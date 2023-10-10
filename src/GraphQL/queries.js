@@ -65,6 +65,7 @@ const MOVIES_LIST = `query get($array:[String!]){
     id
     name
     about
+    slug
     coverPhoto {
       url
     }

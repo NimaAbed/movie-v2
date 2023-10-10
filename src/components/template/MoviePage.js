@@ -80,6 +80,8 @@ const MoviePage = (props) => {
 
     const sendComment = async () => {
 
+        const { email, text } = comVAlue
+
         if (!text) {
             toast.error("متن کامنت را وارد کنید")
             return
@@ -143,7 +145,7 @@ const MoviePage = (props) => {
 
     return (
         <Container maxWidth="lg" className={styles.container}>
-            <Grid container columnSpacing={5} >
+            <Grid container columnSpacing={{ lg: 5 }} >
                 <Grid item xs={12} >
                     <div className={styles.savedForm}>
                         <Box sx={{ minWidth: 120 }}>
