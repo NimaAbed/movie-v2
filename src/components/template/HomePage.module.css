@@ -1,0 +1,13 @@
+.title {
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #003f88;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.title a {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}

@@ -1,0 +1,42 @@
+.container .header {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .header span {
+    width: fit-content;
+    padding: 2px 5px;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #00509d;
+}
+
+@media (max-width: 400px) {
+    .container .header {
+        flex-direction: column;
+        align-items: start;
+    }
+    .container .header * {
+        margin-top: 10px;
+    }
+}
+
+/* Styles For Main */
+
+/* .container .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    margin-top: 50px;
+}
+
+.container .main .card {
+    width: 150px;
+    height: 170px;
+    margin: 0 10px;
+    background-color: gray;
+    border-radius: 10px;
+} */

@@ -1,0 +1,56 @@
+.container {
+    width: 180px;
+    height: 250px;
+    border-radius: 10px;
+    margin: 0 6px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fff;
+    transition: all linear 0.1s;
+}
+
+.container img {
+    width: 100%;
+    height: 100%;
+}
+
+.container:hover {
+    transform: scale(1.1);
+}
+
+.container:hover img {
+    filter: brightness(40%);
+}
+
+.container .text {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    left: 11px;
+    text-align: left;
+    transition: all linear 0.1s;
+}
+
+.container:hover .text {
+    opacity: 0;
+}
+
+.container .desc {
+    width: 100%;
+    height: 250px;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0 5px;
+    transition: all linear 0.3s;
+    text-overflow: ellipsis;
+    transform: translateY(135px);
+}
+
+.container:hover .desc {
+    transform: translateY(0);
+    opacity: 1;
+}

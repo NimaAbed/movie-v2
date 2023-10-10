@@ -1,0 +1,41 @@
+.container {
+    position: relative;
+    height: 250px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: gray;
+    border-radius: 25px;
+    margin: 0 10px;
+}
+
+.container svg {
+    font-size: 4rem;
+}
+
+.container .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.container .header .time {
+    font-size: 1.25rem;
+}
+
+.container .header span {
+    color: #00509d;
+}
+
+.container button {
+    border: 2px dashed #00509d;
+    padding: 7px 0;
+    width: 80%;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.2s;
+}

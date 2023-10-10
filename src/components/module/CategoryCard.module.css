@@ -1,0 +1,28 @@
+.title {
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #003f88;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.title a {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cardContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.cardContainer {
+    overflow: scroll;
+    height: 280px;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    margin-bottom: 20px;
+}
