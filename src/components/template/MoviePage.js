@@ -192,7 +192,7 @@ const MoviePage = (props) => {
                             </Tabs>
                         </Box>
                         <CustomTabPanel value={value} index={0}>
-                            <Grid container spacing={2} sx={!haveAcc ? { filter: "blur(2px)" } : null}>
+                            <Grid container spacing={2} sx={!movie.seasons.length && !movie.episodes.length ? null : !haveAcc ? { filter: "blur(2px)" } : null}>
                                 {!movie.seasons.length && !movie.episodes.length ? <div className={styles.notShared}>هنوز <span>منتشر</span> نشده است</div> :
                                     movie.seasons.length ? <Box mt={2} >
                                         {movie.seasons.map(item => (
@@ -224,7 +224,7 @@ const MoviePage = (props) => {
                                     )
                                 }
                             </Grid>
-                            {!user ?
+                            {!movie.seasons.length && !movie.episodes.length ? null : !user ?
                                 <div className={styles.haveAcc}>
                                     <div>برای دانلود باید وارد <span>حساب</span> خود شوید</div>
                                     <Link href="/signin">ورود</Link>
