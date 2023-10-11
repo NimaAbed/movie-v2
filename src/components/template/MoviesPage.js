@@ -8,8 +8,8 @@ const MoviesPage = ({ movies }) => {
             <div className={styles.container}>
                 <Grid container>
                     {movies.category.movies.map(item => (
-                        <Grid item xs={6} sm={4} md={3} lg={2} sx={{ marginBottom: "20px" }}>
-                            <Cards {...item} key={item.id} />
+                        <Grid item xs={6} key={item.id} sm={4} md={3} lg={2} sx={{ marginBottom: "20px" }}>
+                            <Cards {...item} />
                         </Grid>
                     ))}
                 </Grid>

@@ -58,7 +58,7 @@ const DashboardSideBar = ({ children, email }) => {
                             <li id="dashboard"><Link href="/dashboard"><IoFolderOpenOutline /> داشبورد</Link></li>
                             <li id="premium"><Link href="/dashboard/premium"><MdWorkspacePremium /> خرید اشتراک</Link></li>
                             <li id="movie-list"><Link href="/dashboard/movie-list"><BiCameraMovie /> فیلم لیست</Link></li>
-                            <li ><PiUserGear /> ویرایش پروفایل</li>
+                            {/* <li ><PiUserGear /> ویرایش پروفایل</li> */}
                             {/* <li id="add-movie"><Link href="/dashboard/add-movie"><MdOutlineMovieFilter /> ثبت فیلم</Link></li> */}
                             <li onClick={() => signOut({ redirect: false })}><BiLogOut /> خروج</li>
 

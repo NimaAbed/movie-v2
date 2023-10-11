@@ -13,22 +13,34 @@ const page = async () => {
 
     const user = await User.findOne({ email: session.user.email })
 
-    const movies = user.movieList.map(item => item.slug)
 
-    const { data } = await fetch(process.env.GRAPH_URI, {
-        method: "POST",
-        body: JSON.stringify({
-            query: MOVIES_LIST,
-            variables: { array: movies }
-        }),
-        headers: { 'Content-Type': 'application/json' },
-        cache: "no-store"
-    }).then(res => res.json())
+    let movies = {}
+
+    for (let i of user.movieList) {
+        if (!movies[i.status]) movies[i.status] = []
+        movies[i.status].push(i.slug)
+    }
 
 
+    for (let item of Object.keys(movies)) {
+        const { data } = await fetch(process.env.GRAPH_URI, {
+            method: "POST",
+            body: JSON.stringify({
+                query: MOVIES_LIST,
+                variables: { array: movies[item] }
+            }),
+            headers: { 'Content-Type': 'application/json' },
+            cache: "no-store"
+        }).then(res => res.json())
+        movies[item] = data.movies
+        if (!movies["all"]) movies["all"] = []
+        movies["all"].push(...data.movies)
+    }
+
+    console.log(movies)
 
     return (
-        <MovieListPage movies={data.movies} />
+        <MovieListPage movies={movies} />
     );
 };
 
