@@ -227,7 +227,10 @@ const MoviePage = (props) => {
                             {!movie.seasons.length && !movie.episodes.length ? null : !user ?
                                 <div className={styles.haveAcc}>
                                     <div>برای دانلود باید وارد <span>حساب</span> خود شوید</div>
-                                    <Link href="/signin">ورود</Link>
+                                    <div>
+                                        <Link href="/signin">ورود</Link>
+                                        <Link href="/signup">ثبت نام</Link>
+                                    </div>
                                 </div>
                                 : !haveAcc ? <div className={styles.haveAcc}>
                                     <div>برای دانلود باید <span>اشتراک</span> داشته باشید</div>

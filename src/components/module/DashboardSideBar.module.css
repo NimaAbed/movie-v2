@@ -106,7 +106,7 @@
     border-right: none;
     margin-top: 50px;
     min-height: 400px;
-    max-height: 450px;
+    /* max-height: 450px; */
     border-radius: 10px 0 0 10px;
     overflow: hidden;
 }
@@ -121,6 +121,7 @@
     .container .main {
         border: 2px solid #00509d;
         border-radius: 10px;
+        margin-bottom: 20px;
     }
     .container .sideBar ul li.active {
         width: 95%;
