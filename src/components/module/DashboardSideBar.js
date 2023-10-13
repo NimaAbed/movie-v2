@@ -20,7 +20,7 @@ const DashboardSideBar = ({ children, email }) => {
     const [active, setActive] = useState(null)
     const ulRef = useRef(null)
     const path = usePathname()
-    const route = useRouter()
+    const router = useRouter()
     // const ulHandler = (evt) => {
     //     const { tagName } = evt.target
     //     if (tagName === "LI") {
@@ -44,6 +44,11 @@ const DashboardSideBar = ({ children, email }) => {
         }
     }, [path])
 
+    const signoutHandler = async () => {
+        await signOut({ redirect: false })
+        router.refresh()
+    }
+
 
     return (
         <Container>
@@ -60,7 +65,7 @@ const DashboardSideBar = ({ children, email }) => {
                             <li id="movie-list"><Link href="/dashboard/movie-list"><BiCameraMovie /> فیلم لیست</Link></li>
                             {/* <li ><PiUserGear /> ویرایش پروفایل</li> */}
                             {/* <li id="add-movie"><Link href="/dashboard/add-movie"><MdOutlineMovieFilter /> ثبت فیلم</Link></li> */}
-                            <li onClick={() => signOut({ redirect: false })}><BiLogOut /> خروج</li>
+                            <li onClick={signoutHandler}><BiLogOut /> خروج</li>
 
                         </ul>
                     </Grid>
