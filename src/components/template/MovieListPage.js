@@ -33,7 +33,7 @@ const MovieListPage = ({ movies }) => {
                     <ToggleButton value="all">همه</ToggleButton>
                 </ToggleButtonGroup>
             </div>
-            {movies[alignment].map((item, index) => (
+            {movies[alignment]?.map((item, index) => (
                 <Cards key={index} style={{ marginTop: "7.5px", marginBottom: "7.5px" }} {...item} />
             ))}
             <Toaster />

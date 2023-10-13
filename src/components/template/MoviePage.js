@@ -141,6 +141,7 @@ const MoviePage = (props) => {
                 router.refresh()
             } else {
                 toast.success(data.message)
+                router.refresh()
             }
         }
     }
