@@ -1,0 +1,31 @@
+.container {
+    background: #00509d;
+    margin: 20px 0;
+    padding: 20px 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+.container .main {
+    width: 300px;
+}
+
+.container .main p {
+    font-size: 12px;
+}
+
+.container .link ul li {
+    list-style: none;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.container .link ul li:first-child {
+    color: #a3a8b2;
+}
+
+@media (max-width: 600px) {
+    .container .main {
+        margin-bottom: 20px;
+    }
+}
